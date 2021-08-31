@@ -1,7 +1,6 @@
 {
   "name": "diary",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "dependencies": {
     "cors": "^2.8.5",
@@ -17,5 +16,15 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thakurarjun/BackendDiary.git"
+  },
+  "bugs": {
+    "url": "https://github.com/thakurarjun/BackendDiary/issues"
+  },
+  "homepage": "https://github.com/thakurarjun/BackendDiary#readme",
+  "description": ""
 }

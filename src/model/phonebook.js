@@ -4,7 +4,7 @@ require("dotenv").config();
 const url = `mongodb+srv://fullstack:${process.env.PASSWORD}@cluster0.crzpn.mongodb.net/phonebook-app?retryWrites=true&w=majority`;
 console.log("connecting to", url);
 mongoose
-  .connect(url, {
+  .connect(url, { 
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useFindAndModify: false,
