@@ -49,7 +49,7 @@ phonebookRouter.delete("/:id", (req, res, next) => {
     })
     .catch((error) => next(error));
 });
-phonebookRouter.put("/api/phonebook/:id", (req, res, next) => {
+phonebookRouter.put("/:id", (req, res, next) => {
   const body = req.body;
   const phonebook = {
     name: body.name,
