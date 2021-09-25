@@ -3,25 +3,31 @@
   "version": "1.0.0",
   "main": "index.js",
   "dependencies": {
+    "bcrypt": "^5.0.1",
     "cors": "^2.8.5",
+    "cross-env": "^7.0.3",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "json": "^11.0.0",
+    "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.13.7",
     "mongoose-unique-validator": "^2.0.3",
+    "nodemon": "^2.0.12",
     "server": "^1.0.34"
   },
   "scripts": {
-    "start": "node index.js",
+    "start": "cross-env NODE_ENV=production node index.js",
+    "dev": "cross-env NODE_ENV=development nodemon index.js",
     "lint": "eslint .",
-    "test": "jest --verbose"
+    "test": "cross-env NODE_ENV=test jest --verbose --runInBand"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "eslint": "^7.32.0",
     "eslint-plugin-react": "^7.25.1",
-    "jest": "^27.1.1"
+    "jest": "^27.1.1",
+    "supertest": "^6.1.6"
   },
   "repository": {
     "type": "git",
