@@ -18,7 +18,7 @@ phonebookRouter.get("/:id", (req, res, next) => {
     .catch((error) => next(error));
 });
 const getTokenFrom = request => {
-  const authorization = request.get('authorization')
+  const authorization = request.get('Authorization')
   if (authorization && authorization.toLowerCase().startsWith('bearer ')) {
     return authorization.substring(7)
   };
@@ -26,7 +26,7 @@ const getTokenFrom = request => {
 };
 phonebookRouter.post("/", async (req, res, next) => {
   const body = req.body;
-  const token = getTokenFrom(request);
+  const token = getTokenFrom(req);
   const decodedToken = jwt.verify(token, process.env.SECRET)
   if (!token || !decodedToken.id) {
     return response.status(401).json({ error: 'token missing or invalid' })

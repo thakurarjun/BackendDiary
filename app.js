@@ -9,7 +9,7 @@ const logger = require("./utils/logger");
 const loginRouter = require('./controllers/login');
 const mongoose = require("mongoose");
 app.use(cors());
-app.use('/api/login', loginRouter);
+
 logger.info("connecting to", config);
 logger.info("connecting to", config.MONGODB_URI);
 
@@ -31,7 +31,7 @@ app.use(cors());
 app.use(express.static("build"));
 app.use(express.json());
 app.use(middleware.requestLogger);
-
+app.use('/api/login', loginRouter);
 app.use("/api/phonebook", phonebookRouter);
 app.use("/api/users", usersRouter);
 
